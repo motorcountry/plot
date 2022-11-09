@@ -67,7 +67,7 @@ WiFiUDP ntpUDP;
 NTPClient timeClient(ntpUDP, "ntp1.aliyun.com",60*60*8, 30*60*1000);//服务器，获取时间
 
 
-FansInfo fansInfo("264396291");       // 建立对象用于获取粉丝信息，括号中的参数是UP主的ID号
+FansInfo fansInfo("123321123");       // 建立对象用于获取粉丝信息，括号中的参数是UP主的ID号
                                      
 
 
