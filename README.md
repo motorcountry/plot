@@ -51,17 +51,17 @@
 
 成功拿到数据后，我们就可以把数据交给写字函数，控制机械臂完成对数字的书写任务。具体代码如下：
 
-   wipe();//擦除
-   number(0, 25, currenthour/10, 0.9);//时钟十位
-   number(16, 25, currenthour%10, 0.9);//时钟个位
-   number(28, 25, 11, 0.9);//冒号
+       wipe();//擦除
+       number(0, 25, currenthour/10, 0.9);//时钟十位
+       number(16, 25, currenthour%10, 0.9);//时钟个位
+       number(28, 25, 11, 0.9);//冒号
 
-   number(37, 25, currentminute/10, 0.9);//分钟十位
-   number(53, 25, currentminute%10, 0.9);//分钟个位
+      number(37, 25, currentminute/10, 0.9);//分钟十位
+      number(53, 25, currentminute%10, 0.9);//分钟个位
 
 同样的，对于拿到的粉丝数，由于他是一个0~9999的数字，我们对这个数字进行拆分，分别拿到个位、十位，百位和千位单个数字，再去交给机械臂书写。具体代码如下：
 
-if(currentfansnum>=0&&currentfansnum<10)//粉丝数0~9
+      if(currentfansnum>=0&&currentfansnum<10)//粉丝数0~9
         {
           number(0, 25, 0, 0.9);//千位
           number(16, 25, 0, 0.9);//百位
@@ -91,6 +91,7 @@ if(currentfansnum>=0&&currentfansnum<10)//粉丝数0~9
         }
 
 以上是控制代码的主体，详细的控制工程可以查阅源代码。现在就只需要把代码编译下载到ESP8266-NodeMCU开发板中，小机器人就可以开始写字啦！
+
 
 ![image](https://user-images.githubusercontent.com/117577770/205494104-4aa9c9f5-ca2b-46cb-ae43-cb7d2bd54fce.png)![image](https://user-images.githubusercontent.com/117577770/205494114-7a3e8e08-d7be-47ca-b80c-788be91d8e22.png)
 
