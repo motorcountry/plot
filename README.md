@@ -35,19 +35,19 @@
 
   完成前面的配置工作后，程序就进入到了setup()函数中，完成一些网络连接，机械臂归位等初始化工作，如果WIFI没有连接成功，则会一直打印小数点。在后面的主循环loop()函数中，利用以下代码实时拿到时间和粉丝数：
 
-timeClient.update();//实时更新时间
-  delay(100);
+    timeClient.update();//实时更新时间
+      delay(100);
   
-  int currenthour=timeClient.getHours();//拿到时间
-  int currentminute=timeClient.getMinutes();
-  int currentfansnum;
+      int currenthour=timeClient.getHours();//拿到时间
+      int currentminute=timeClient.getMinutes();
+      int currentfansnum;
   
-if(fansInfo.update())//实时更新粉丝数
- {
-  Serial.print("Fans Number: ");
-  Serial.println(fansInfo.getFansNumber());
-  currentfansnum=fansInfo.getFansNumber();//拿到粉丝数
-  }
+    if(fansInfo.update())//实时更新粉丝数
+     {
+     Serial.print("Fans Number: ");
+     Serial.println(fansInfo.getFansNumber());
+     currentfansnum=fansInfo.getFansNumber();//拿到粉丝数
+     }
 
 成功拿到数据后，我们就可以把数据交给写字函数，控制机械臂完成对数字的书写任务。具体代码如下：
 
