@@ -24,7 +24,8 @@
 
 ![image](https://user-images.githubusercontent.com/117577770/205493988-78c11fc3-1810-4de9-8178-357ef7404348.png)
 
-  在plotclock作者Johannes Heberlein开源代码上，我修改了擦写的执行代码，另外我还加入了获取实时粉丝数的功能，为了实现此效果，需要引入NTPClient,ESP8266WiFi,WiFiUdp和FansInfo四个头文件。其中前三个库都可以在arduino的库管理选项中进行下载，第四个库可以通过Github代码托管平台获取，文末会给出具体链接。自己下载的库要放到arduino编译会寻找库文件的目录下即可。  上面的库配置成功后，编译代码没有出错就说明软件环境基本成功了。不过呢要想机器人工作，还需要修改WIFI为你周围可用的账号密码，修改你想查询粉丝数UP主的uid（用户编号）和更换你的舵机信号引脚号。
+  在plotclock作者Johannes Heberlein开源代码上，我修改了擦写的执行代码，另外我还加入了获取实时粉丝数的功能，为了实现此效果，需要引入NTPClient,ESP8266WiFi,WiFiUdp和FansInfo四个头文件。其中前三个库都可以在arduino的库管理选项中进行下载，第四个库可以通过Github代码托管平台获取，文末会给出具体链接。自己下载的库要放到arduino编译会寻找库文件的目录下即可。  
+  上面的库配置成功后，编译代码没有出错就说明软件环境基本成功了。不过呢要想机器人工作，还需要修改WIFI为你周围可用的账号密码，修改你想查询粉丝数UP主的uid（用户编号）和更换你的舵机信号引脚号。
   
 
 const char *ssid     = "Don't worry";//wifi账号，需要更改为你自己的账号密码
