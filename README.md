@@ -28,8 +28,8 @@
   上面的库配置成功后，编译代码没有出错就说明软件环境基本成功了。不过呢要想机器人工作，还需要修改WIFI为你周围可用的账号密码，修改你想查询粉丝数UP主的uid（用户编号）和更换你的舵机信号引脚号。
   
 
-const char *ssid     = "Don't worry";//wifi账号，需要更改为你自己的账号密码
-const char *password = "xyymyylyyfyymyyrmmhtlhtl";//wifi密码 
+const char *ssid     = "Don't worry";//wifi账号，需要更改为你自己的账号密码  
+const char *password = "xyymyylyyfyymyyrmmhtlhtl";//wifi密码   
 FansInfo fansInfo("3493076135840688");//建立对象用于获取粉丝信息，括号中的参数是UP主的ID号
 
 
